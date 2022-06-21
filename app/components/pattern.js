@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Image, Button } from 'react-native';
-import WaitingPattern from './components/waitingPattern';
+import WaitingPattern from './waitingPattern';
 
 const Pattern = () => {
     return (

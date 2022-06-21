@@ -47,7 +47,7 @@ function ProfileScreen({ navigation }) {
       <Profile></Profile>
       <Button 
         color = '#FAD4D4'
-        title="Go back" 
+        title="Go Back" 
         onPress={() => navigation.goBack()} />
     </View>
   );
@@ -59,7 +59,7 @@ function BuildPattern({ navigation }) {
       <Pattern></Pattern>
       <Button 
         color = '#FAD4D4'
-        title="Go back" 
+        title="Go Back" 
         onPress={() => navigation.goBack()} />
     </View>
   );
@@ -95,7 +95,7 @@ function ClassScreen({ navigation }) {
       />
       <Button
         color = '#FAD4D4'
-        title="Go back" 
+        title="Go Back" 
         onPress={() => navigation.goBack()} />
     </View>
 
@@ -108,7 +108,7 @@ function BMIScreen({ navigation }) {
       <BMI></BMI>
       <Button
         color = '#FAD4D4'
-        title="Go back" 
+        title="Go Back" 
         onPress={() => navigation.goBack()} />
     </View>
   );
@@ -120,7 +120,7 @@ function ChangeScreen({ navigation }) {
       <Change></Change>
       <Button
         color = '#FAD4D4'
-        title="Go back" 
+        title="Go Back" 
         onPress={() => navigation.goBack()} />
     </View>
   );
@@ -132,7 +132,7 @@ function CounterScreen({ navigation }) {
       <Counter></Counter>
       <Button
         color = '#FAD4D4'
-        title="Go back" 
+        title="Go Back" 
         onPress={() => navigation.goBack()} />    </View>
   );
 }
@@ -143,7 +143,7 @@ function CylinderScreen({ navigation }) {
       <Cylinder></Cylinder>
       <Button
         color = '#FAD4D4'
-        title="Go back" 
+        title="Go Back" 
         onPress={() => navigation.goBack()} />    </View>
   );
 }
@@ -154,7 +154,7 @@ function GitHubScreen({ navigation }) {
       <GitHubDemo></GitHubDemo>
       <Button
         color = '#FAD4D4'
-        title="Go back" 
+        title="Go Back" 
         onPress={() => navigation.goBack()} />    </View>
   );
 }

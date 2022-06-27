@@ -1,8 +1,9 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Image, Button } from 'react-native';
+import { StyleSheet, Text, View, Image, Button, TextInput } from 'react-native';
+import React,{useState} from 'react';
 
 const Profile = () => {
-    return (
+  return (
     <View style={styles.container}>
       <Text style={styles.title}>About the Developer</Text>
       <Text style={styles.title2}> Allison Chanin</Text>

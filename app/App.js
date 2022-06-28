@@ -1,3 +1,7 @@
+//code from exam5
+//import AsyncContext from './components/asyncContextDemo';
+//export default AsyncContext;
+
 // command option j to open java script in chrome
 // use expo start in terminal instead of npm start
 

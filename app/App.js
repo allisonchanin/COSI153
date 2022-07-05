@@ -54,11 +54,6 @@ function HomeScreen({ navigation }) {
           color = '#FAD4D4'
          onPress={() => navigation.navigate('Pattern')}
         />
-        <Button
-         color = '#FAD4D4'
-         title="Go to Class"
-          onPress={() => navigation.navigate('Cosi153')}
-        />
       </View>
     </View>
   );
@@ -105,143 +100,143 @@ function BuildPattern({ navigation }) {
   );
 }
 
-function ClassScreen({ navigation }) {
-  return (
-    <View style={styles.first}>
-      <Button
-        color = '#FAD4D4'
-        title="Go to BMI"
-        onPress={() => navigation.navigate('BMI')}
-      />
-      <Button
-        color = '#FAD4D4'
-        title="Go to Change"
-        onPress={() => navigation.navigate('Change')}
-      />
-      <Button
-        color = '#FAD4D4'
-        title="Go to Counter"
-        onPress={() => navigation.navigate('Counter')}
-      />
-      <Button
-        color = '#FAD4D4'
-        title="Go to Cylinder"
-        onPress={() => navigation.navigate('Cylinder')}
-      />
-      <Button
-        color = '#FAD4D4'
-        title="Go to Named Counter"
-        onPress={() => navigation.navigate('NamedCounter')}
-      />
-      <Button
-        color = '#FAD4D4'
-        title="Go to Named Context Counter"
-        onPress={() => navigation.navigate('NamedCounterContext')}
-      />
-       <Button
-        color = '#FAD4D4'
-        title="Go to Github"
-        onPress={() => navigation.navigate('Github')}
-      />
-      <Button
-        color = '#FAD4D4'
-        title="Go Back" 
-        onPress={() => navigation.goBack()} />
-    </View>
+// function ClassScreen({ navigation }) {
+//   return (
+//     <View style={styles.first}>
+//       <Button
+//         color = '#FAD4D4'
+//         title="Go to BMI"
+//         onPress={() => navigation.navigate('BMI')}
+//       />
+//       <Button
+//         color = '#FAD4D4'
+//         title="Go to Change"
+//         onPress={() => navigation.navigate('Change')}
+//       />
+//       <Button
+//         color = '#FAD4D4'
+//         title="Go to Counter"
+//         onPress={() => navigation.navigate('Counter')}
+//       />
+//       <Button
+//         color = '#FAD4D4'
+//         title="Go to Cylinder"
+//         onPress={() => navigation.navigate('Cylinder')}
+//       />
+//       <Button
+//         color = '#FAD4D4'
+//         title="Go to Named Counter"
+//         onPress={() => navigation.navigate('NamedCounter')}
+//       />
+//       <Button
+//         color = '#FAD4D4'
+//         title="Go to Named Context Counter"
+//         onPress={() => navigation.navigate('NamedCounterContext')}
+//       />
+//        <Button
+//         color = '#FAD4D4'
+//         title="Go to Github"
+//         onPress={() => navigation.navigate('Github')}
+//       />
+//       <Button
+//         color = '#FAD4D4'
+//         title="Go Back" 
+//         onPress={() => navigation.goBack()} />
+//     </View>
 
-  );
-}
+//   );
+// }
 
-function BMIScreen({ navigation }) {
-  return (
-    <View style={styles.container}>
-      <BMI></BMI>
-      <Button
-        color = '#FAD4D4'
-        title="Go Back" 
-        onPress={() => navigation.goBack()} />
-    </View>
-  );
-}
+// function BMIScreen({ navigation }) {
+//   return (
+//     <View style={styles.container}>
+//       <BMI></BMI>
+//       <Button
+//         color = '#FAD4D4'
+//         title="Go Back" 
+//         onPress={() => navigation.goBack()} />
+//     </View>
+//   );
+// }
 
-function ChangeScreen({ navigation }) {
-  return (
-    <View style={styles.container}>
-      <Change></Change>
-      <Button
-        color = '#FAD4D4'
-        title="Go Back" 
-        onPress={() => navigation.goBack()} />
-    </View>
-  );
-}
+// function ChangeScreen({ navigation }) {
+//   return (
+//     <View style={styles.container}>
+//       <Change></Change>
+//       <Button
+//         color = '#FAD4D4'
+//         title="Go Back" 
+//         onPress={() => navigation.goBack()} />
+//     </View>
+//   );
+// }
 
-function CounterScreen({ navigation }) {
-  return (
-    <View style={styles.container}>
-      <Counter></Counter>
-      <Button
-        color = '#FAD4D4'
-        title="Go Back" 
-        onPress={() => navigation.goBack()} />    
-    </View>
-  );
-}
+// function CounterScreen({ navigation }) {
+//   return (
+//     <View style={styles.container}>
+//       <Counter></Counter>
+//       <Button
+//         color = '#FAD4D4'
+//         title="Go Back" 
+//         onPress={() => navigation.goBack()} />    
+//     </View>
+//   );
+// }
 
-function CylinderScreen({ navigation }) {
-  return (
-    <View style={styles.container}>
-      <Cylinder></Cylinder>
-      <Button
-        color = '#FAD4D4'
-        title="Go Back" 
-        onPress={() => navigation.goBack()} />    
-    </View>
-  );
-}
+// function CylinderScreen({ navigation }) {
+//   return (
+//     <View style={styles.container}>
+//       <Cylinder></Cylinder>
+//       <Button
+//         color = '#FAD4D4'
+//         title="Go Back" 
+//         onPress={() => navigation.goBack()} />    
+//     </View>
+//   );
+// }
 
-function NCounterScreen({ navigation }) {
-    const[total,setTotal] = useState(0);
-    const updateTotal = (v) => setTotal(v+total);
-    const[coins,setCoins] = useState(0);
-    const updateCoins = () => setCoins(coins+1);
-  return (
-    <View style={styles.container}>
-      <Text>{coins} coins</Text>
-      <Text>Total is {total}</Text>
-      <NamedCounter label="penny" value={1} updateTotal={updateTotal} updateCoins={updateCoins}></NamedCounter>
-      <NamedCounter label="nickel" value={5} updateTotal={updateTotal} updateCoins={updateCoins}></NamedCounter>
-      <NamedCounter label="dime" value={10} updateTotal={updateTotal} updateCoins={updateCoins}></NamedCounter>
-      <Button
-        color = '#FAD4D4'
-        title="Go Back" 
-        onPress={() => navigation.goBack()} />    
-    </View>
-  );
-}
+// function NCounterScreen({ navigation }) {
+//     const[total,setTotal] = useState(0);
+//     const updateTotal = (v) => setTotal(v+total);
+//     const[coins,setCoins] = useState(0);
+//     const updateCoins = () => setCoins(coins+1);
+//   return (
+//     <View style={styles.container}>
+//       <Text>{coins} coins</Text>
+//       <Text>Total is {total}</Text>
+//       <NamedCounter label="penny" value={1} updateTotal={updateTotal} updateCoins={updateCoins}></NamedCounter>
+//       <NamedCounter label="nickel" value={5} updateTotal={updateTotal} updateCoins={updateCoins}></NamedCounter>
+//       <NamedCounter label="dime" value={10} updateTotal={updateTotal} updateCoins={updateCoins}></NamedCounter>
+//       <Button
+//         color = '#FAD4D4'
+//         title="Go Back" 
+//         onPress={() => navigation.goBack()} />    
+//     </View>
+//   );
+// }
 
-function NCounterContextScreen({ navigation }) {
-return (
-  <View style={styles.container}>
-    <Context></Context>
-    <Button
-        color = '#FAD4D4'
-        title="Go Back" 
-        onPress={() => navigation.goBack()} />
-  </View>
-);
-}
+// function NCounterContextScreen({ navigation }) {
+// return (
+//   <View style={styles.container}>
+//     <Context></Context>
+//     <Button
+//         color = '#FAD4D4'
+//         title="Go Back" 
+//         onPress={() => navigation.goBack()} />
+//   </View>
+// );
+// }
 
-function GitHubScreen({ navigation }) {
-  return (
-    <View style={styles.container}>
-      <GitHubDemo></GitHubDemo>
-      <Button
-        color = '#FAD4D4'
-        title="Go Back" 
-        onPress={() => navigation.goBack()} />    </View>
-  );
-}
+// function GitHubScreen({ navigation }) {
+//   return (
+//     <View style={styles.container}>
+//       <GitHubDemo></GitHubDemo>
+//       <Button
+//         color = '#FAD4D4'
+//         title="Go Back" 
+//         onPress={() => navigation.goBack()} />    </View>
+//   );
+// }
 
 const Stack = createStackNavigator();
 
@@ -251,15 +246,15 @@ function MyStack() {
       <Stack.Screen name="Home" component={HomeScreen} options={{headerShown : false}}/>
       <Stack.Screen name="Profile" component={ProfileScreen} options={{headerShown : false}} />
       <Stack.Screen name="Profile2" component={Profile2Screen} options={{headerShown : false}} />
-      <Stack.Screen name="Cosi153" component={ClassScreen} options={{headerShown : false}} />
       <Stack.Screen name="Pattern" component={BuildPattern} options={{headerShown : false}} />
+      {/* <Stack.Screen name="Cosi153" component={ClassScreen} options={{headerShown : false}} />
       <Stack.Screen name="BMI" component={BMIScreen} options={{headerShown : false}} />
       <Stack.Screen name="Change" component={ChangeScreen} options={{headerShown : false}} />
       <Stack.Screen name="Counter" component={CounterScreen} options={{headerShown : false}} />
       <Stack.Screen name="Cylinder" component={CylinderScreen} options={{headerShown : false}} />
       <Stack.Screen name="NamedCounter" component={NCounterScreen} options={{headerShown : false}} />
       <Stack.Screen name="NamedCounterContext" component={NCounterContextScreen} options={{headerShown : false}} />
-      <Stack.Screen name="Github" component={GitHubScreen} options={{headerShown : false}} />
+      <Stack.Screen name="Github" component={GitHubScreen} options={{headerShown : false}} /> */}
     </Stack.Navigator>
   );
 }
@@ -295,6 +290,5 @@ const styles = StyleSheet.create({
     fontSize: 30,
     fontWeight: 'bold',
     paddingBottom: 20,
-    fontFamily: 'Roboto'
    },
 });

@@ -45,12 +45,7 @@ const Async1 = () => {
             <Button 
                title="save profile"
                onPress = {() => 
-                    setCurrentValue({
-                        name:name,
-                        age:age,
-                        weight:parseFloat(weight),
-                        height:parseFloat(height),
-                    })
+                    setCurrentValue({...currentValue,name,age,weight,height})
                 }
                />
             

@@ -11,7 +11,6 @@ const Pattern = () => {
       <Text style={styles.paragraph}> The ability to make and save your patterns is coming soon!!
       </Text>
       <Context></Context>
-      <WaitingPattern></WaitingPattern>
       <StatusBar style="auto" />
     </View>
   );
@@ -29,18 +28,15 @@ const styles = StyleSheet.create({
    fontSize: 30,
    fontWeight: 'bold',
    paddingBottom: 20,
-   fontFamily: 'Roboto'
   },
   title2: {
     fontSize: 20,
     fontWeight: 'bold',
-    fontFamily: 'Roboto'
    },
   paragraph:{
     paddingTop:15,
     paddingBottom: 15,
     textAlign: 'center',
-    fontFamily: 'Roboto',
     fontSize: 15,
   },
 });

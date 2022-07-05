@@ -33,18 +33,15 @@ const styles = StyleSheet.create({
    fontSize: 30,
    fontWeight: 'bold',
    paddingBottom: 20,
-   fontFamily: 'Roboto'
   },
   title2: {
     fontSize: 20,
     fontWeight: 'bold',
-    fontFamily: 'Roboto'
    },
   paragraph:{
     paddingTop:15,
     paddingBottom: 15,
     textAlign: 'center',
-    fontFamily: 'Roboto',
     fontSize: 15,
   },
   image:{

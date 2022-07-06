@@ -33,6 +33,7 @@ import ValueProvider,{useValue} from './components/ValueContext';
 import Context from './components/contextDemo';
 import PaletteContext from './components/palette';
 import PalettePreview from './components/paletteShow';
+import WaitingPattern from './components/waitingPattern';
 
 
 const AppContext = () => {
@@ -61,6 +62,11 @@ function HomeScreen({ navigation }) {
          title = 'Build a Pattern'
           color = '#FAD4D4'
          onPress={() => navigation.navigate('Pattern')}
+        />
+        <Button
+         title = 'Make a Cocktail'
+          color = '#FAD4D4'
+         onPress={() => navigation.navigate('Cocktail')}
         />
       </View>
     </View>
@@ -117,6 +123,18 @@ function PreviewScreen({ navigation }) {
   return (
     <View style={styles.container}>
       <PalettePreview></PalettePreview>
+      <Button 
+        color = '#FAD4D4'
+        title="Go Back" 
+        onPress={() => navigation.goBack()} />
+    </View>
+  );
+}
+
+function CocktailScreen({ navigation }) {
+  return (
+    <View style={styles.container}>
+      <WaitingPattern></WaitingPattern>
       <Button 
         color = '#FAD4D4'
         title="Go Back" 
@@ -273,6 +291,8 @@ function MyStack() {
       <Stack.Screen name="Profile2" component={Profile2Screen} options={{headerShown : false}} />
       <Stack.Screen name="Pattern" component={BuildPattern} options={{headerShown : false}} />
       <Stack.Screen name="PaletteView" component={PreviewScreen} options={{headerShown : false}} />
+      <Stack.Screen name="Cocktail" component={CocktailScreen} options={{headerShown : false}} />
+
 
       {/* <Stack.Screen name="Cosi153" component={ClassScreen} options={{headerShown : false}} />
       <Stack.Screen name="BMI" component={BMIScreen} options={{headerShown : false}} />

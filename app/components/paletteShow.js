@@ -8,6 +8,7 @@ const PaletteShow = () => {
 
     return (
     <View style={styles.container}>
+      <Text style={styles.title}> Palette Preview </Text>
       <FlatList
         data={currentValue.colors}
         keyExtractor={({ numberID }, index) => numberID}
@@ -43,8 +44,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   title: {
-   fontSize: 20,
-   paddingBottom: 20,
+   fontSize: 30,
   },
 });
 

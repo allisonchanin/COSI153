@@ -20,7 +20,7 @@ const ValueProvider = ({value, tag, children}) => {
           data = JSON.parse(jsonValue);
           setCurrentValue(data)
         } else {
-          setCurrentValue({value})  
+          setCurrentValue(value)  
         }
       } catch(e) {
         console.dir(e)
@@ -47,4 +47,4 @@ const ValueProvider = ({value, tag, children}) => {
    )
 }
 export default ValueProvider
-export const useValue = () => useContext(ValueContext)
+export const useAsyncValue = () => useContext(ValueContext)

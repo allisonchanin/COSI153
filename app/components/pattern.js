@@ -1,6 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Image, Button } from 'react-native';
-import WaitingPattern from './waitingPattern';
 
 const Pattern = () => {
     return (
@@ -33,7 +32,6 @@ const styles = StyleSheet.create({
    },
   paragraph:{
     paddingTop:15,
-    paddingBottom: 15,
     textAlign: 'center',
     fontSize: 15,
   },

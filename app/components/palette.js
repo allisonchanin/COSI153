@@ -5,7 +5,6 @@ import { StyleSheet, Text, ScrollView, TextInput, Button, FlatList, Image, View 
 
 const Palette = () => {
     const {currentValue,setCurrentValue} = useValue();
-    const [color,setColor] = useState("");
 
     const [search,setSearch] = useState("");
 
@@ -15,7 +14,6 @@ const Palette = () => {
     return (
     <View style={styles.container}>
       <Text style={styles.title}>Build a Palette</Text>
-      <Text> {JSON.stringify(currentValue.names)} </Text>
       <Button
             title = 'Clear Palette'
             color = '#FAD4D4'
@@ -56,7 +54,6 @@ const Palette = () => {
             onPress = {() => {
             setCurrentValue({ 
               colors:currentValue.colors.concat([item]),
-              names:currentValue.names.concat([item.name]),
             })
             }}
           />
@@ -74,7 +71,6 @@ const styles = StyleSheet.create({
   },
   title: {
    fontSize: 30,
-   fontWeight: 'bold',
    paddingBottom: 20,
   },
   display:{

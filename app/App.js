@@ -29,7 +29,9 @@ import Cylinder from './components/cylindervolume';
 import GitHubDemo from './components/githubdemo';
 import NamedCounter from './components/namedCounter';
 import { useState } from 'react';
+import AsyncValueProvider,{useAsyncValue} from './components/asyncValueContext';
 import ValueProvider,{useValue} from './components/ValueContext';
+
 import Context from './components/contextDemo';
 import PaletteContext from './components/palette';
 import PalettePreview from './components/paletteShow';
@@ -37,21 +39,21 @@ import WaitingPattern from './components/waitingPattern';
 
 
 const AppContext = () => {
-    const data = {name:'a', email:'a@c.com',colors:[],names:[]}
+    let data = {name:'a', email:'a@c.com'}
     return (
-      <ValueProvider value={data}>
+      <AsyncValueProvider value={data} tag='app'>
           <App />
-      </ValueProvider>
+      </AsyncValueProvider>
     )
   }
 export default AppContext;
 
 function HomeScreen({ navigation }) {
-    const {currentValue} = useValue();
+    const {currentValue} = useAsyncValue();
   return (
     <View style={styles.first}> 
-    <Text>Home screen for {currentValue.name}  </Text>
-      <Text> with email {currentValue.email}</Text>
+    <Text style={styles.title}>Home screen for {currentValue.name}  </Text>
+      <Text style={styles.title}> with email {currentValue.email}</Text>
       <View style={styles.first}>
        <Button
          color = '#FAD4D4'
@@ -102,32 +104,29 @@ function Profile2Screen({ navigation }) {
   );
 }
 
+// const PaletteWithContext = ({ navigation }) => {
+//   let paletteInfo = {colors:[], names:[]}
+//   return (
+//     <ValueProvider value={paletteInfo}>
+//         <BuildPattern />
+//     </ValueProvider>
+//   )
+// }
+
 function BuildPattern({ navigation }) {
+  let paletteInfo = {colors:[]}
   return (
-    <View style={styles.container}>
-      <Pattern></Pattern>
-      <Button
-            title = 'Preview Palette'
-            color = '#FAD4D4'
-            onPress={() => navigation.navigate('PaletteView')}
-          />
-      <PaletteContext></PaletteContext>
-      <Button 
-        color = '#FAD4D4'
-        title="Go Back" 
-        onPress={() => navigation.goBack()} />
-    </View>
-  );
-}
-function PreviewScreen({ navigation }) {
-  return (
-    <View style={styles.container}>
-      <PalettePreview></PalettePreview>
-      <Button 
-        color = '#FAD4D4'
-        title="Go Back" 
-        onPress={() => navigation.goBack()} />
-    </View>
+    <ValueProvider value={paletteInfo}>
+      <View style={styles.container}>
+        <Pattern></Pattern>
+        <PalettePreview></PalettePreview>
+        <PaletteContext></PaletteContext>
+        <Button 
+          color = '#FAD4D4'
+          title="Go Back" 
+          onPress={() => navigation.goBack()} />
+      </View>
+    </ValueProvider> 
   );
 }
 
@@ -290,7 +289,6 @@ function MyStack() {
       <Stack.Screen name="Profile" component={ProfileScreen} options={{headerShown : false}} />
       <Stack.Screen name="Profile2" component={Profile2Screen} options={{headerShown : false}} />
       <Stack.Screen name="Pattern" component={BuildPattern} options={{headerShown : false}} />
-      <Stack.Screen name="PaletteView" component={PreviewScreen} options={{headerShown : false}} />
       <Stack.Screen name="Cocktail" component={CocktailScreen} options={{headerShown : false}} />
 
 
@@ -335,7 +333,6 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 30,
-    fontWeight: 'bold',
     paddingBottom: 20,
    },
 });

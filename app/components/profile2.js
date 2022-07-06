@@ -3,11 +3,11 @@
 */
 import React,{useState} from 'react';
 import {View,Text,TextInput,Button} from 'react-native';
-import ValueProvider,{useValue} from './ValueContext';
+import ValueProvider,{useAsyncValue} from './asyncValueContext';
 
 
 const Profile2 = () => {
-    const {currentValue,setCurrentValue} = useValue();
+    const {currentValue,setCurrentValue} = useAsyncValue();
     const [name,setName] = useState("anon");
     const [email,setEmail] = useState("anon@anon.com");
 

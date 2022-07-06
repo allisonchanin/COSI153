@@ -2,6 +2,11 @@
 //import AsyncContext from './components/asyncContextDemo';
 //export default AsyncContext;
 
+//code for exam 6
+//import exam6 from './components/exam6';
+//export default exam6;
+
+
 // command option j to open java script in chrome
 // use expo start in terminal instead of npm start
 
@@ -26,9 +31,12 @@ import NamedCounter from './components/namedCounter';
 import { useState } from 'react';
 import ValueProvider,{useValue} from './components/ValueContext';
 import Context from './components/contextDemo';
+import PaletteContext from './components/palette';
+import PalettePreview from './components/paletteShow';
+
 
 const AppContext = () => {
-    const data = {name:'a', email:'a@c.com'}
+    const data = {name:'a', email:'a@c.com',colors:[],names:[]}
     return (
       <ValueProvider value={data}>
           <App />
@@ -92,6 +100,23 @@ function BuildPattern({ navigation }) {
   return (
     <View style={styles.container}>
       <Pattern></Pattern>
+      <Button
+            title = 'Preview Palette'
+            color = '#FAD4D4'
+            onPress={() => navigation.navigate('PaletteView')}
+          />
+      <PaletteContext></PaletteContext>
+      <Button 
+        color = '#FAD4D4'
+        title="Go Back" 
+        onPress={() => navigation.goBack()} />
+    </View>
+  );
+}
+function PreviewScreen({ navigation }) {
+  return (
+    <View style={styles.container}>
+      <PalettePreview></PalettePreview>
       <Button 
         color = '#FAD4D4'
         title="Go Back" 
@@ -247,6 +272,8 @@ function MyStack() {
       <Stack.Screen name="Profile" component={ProfileScreen} options={{headerShown : false}} />
       <Stack.Screen name="Profile2" component={Profile2Screen} options={{headerShown : false}} />
       <Stack.Screen name="Pattern" component={BuildPattern} options={{headerShown : false}} />
+      <Stack.Screen name="PaletteView" component={PreviewScreen} options={{headerShown : false}} />
+
       {/* <Stack.Screen name="Cosi153" component={ClassScreen} options={{headerShown : false}} />
       <Stack.Screen name="BMI" component={BMIScreen} options={{headerShown : false}} />
       <Stack.Screen name="Change" component={ChangeScreen} options={{headerShown : false}} />
@@ -276,15 +303,15 @@ const styles = StyleSheet.create({
     justifyContent: 'space-evenly',
     backgroundColor: '#FFF2F2',
     alignItems: 'center',
-    padding: 30,
-    margin:20,
+    padding: 10,
+    margin:5,
   },
   container: {
     flex: 1,
     backgroundColor: '#FFF2F2',
     alignItems: 'center',
-    padding: 30,
-    margin:20,
+    padding:10,
+    margin:5,
   },
   title: {
     fontSize: 30,

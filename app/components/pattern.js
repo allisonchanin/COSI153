@@ -1,16 +1,14 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Image, Button } from 'react-native';
 import WaitingPattern from './waitingPattern';
-import Context from './paletteContext';
 
 const Pattern = () => {
     return (
     <View style={styles.container}>
       <Text style={styles.title}>Build a Pattern</Text>
       <Text style={styles.title2}> Coming Soon!!!</Text>
-      <Text style={styles.paragraph}> The ability to make and save your patterns is coming soon!!
-      </Text>
-      <Context></Context>
+      <Text style={styles.paragraph}> The ability to make and save your patterns is coming soon!!</Text>
+      
       <StatusBar style="auto" />
     </View>
   );

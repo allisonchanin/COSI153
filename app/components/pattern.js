@@ -15,7 +15,6 @@ const Pattern = () => {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
     backgroundColor: '#FFF2F2',
     alignItems: 'center',
     padding: 30,

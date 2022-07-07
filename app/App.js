@@ -16,7 +16,7 @@ import 'react-native-gesture-handler';
 import { createStackNavigator } from '@react-navigation/stack';
 import { StatusBar } from 'expo-status-bar';
 import { NavigationContainer } from '@react-navigation/native';
-import { StyleSheet, Text, View, Button } from 'react-native';
+import { StyleSheet, Text, View, Button, ScrollView } from 'react-native';
 
 //import Pomodoros from './components/pomodoro';
 import Profile from './components/profile';
@@ -104,20 +104,11 @@ function Profile2Screen({ navigation }) {
   );
 }
 
-// const PaletteWithContext = ({ navigation }) => {
-//   let paletteInfo = {colors:[], names:[]}
-//   return (
-//     <ValueProvider value={paletteInfo}>
-//         <BuildPattern />
-//     </ValueProvider>
-//   )
-// }
-
 function BuildPattern({ navigation }) {
   let paletteInfo = {colors:[]}
   return (
     <ValueProvider value={paletteInfo}>
-      <View style={styles.container}>
+      <ScrollView style={styles.container}>
         <Pattern></Pattern>
         <PalettePreview></PalettePreview>
         <PaletteContext></PaletteContext>
@@ -125,7 +116,7 @@ function BuildPattern({ navigation }) {
           color = '#FAD4D4'
           title="Go Back" 
           onPress={() => navigation.goBack()} />
-      </View>
+      </ScrollView>
     </ValueProvider> 
   );
 }
@@ -327,7 +318,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#FFF2F2',
-    alignItems: 'center',
+    //alignItems: 'center',
     padding:10,
     margin:5,
   },

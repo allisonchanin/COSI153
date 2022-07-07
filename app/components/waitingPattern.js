@@ -34,7 +34,8 @@ const Item = ({ title, link }) => (
       <Text style={styles.title}>{title}</Text>
       <Image
             style={styles.image}
-            source={link}
+            source={{uri:link}}
+
         />
 
     </View>

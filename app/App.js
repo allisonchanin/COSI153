@@ -55,7 +55,7 @@ function HomeScreen({ navigation }) {
     <Text style={styles.title}>Home screen for {currentValue.name}  </Text>
       <Text style={styles.title}> with email {currentValue.email}</Text>
       <View style={styles.first}>
-       <Button
+       <Button 
          color = '#FAD4D4'
          title="Go to Profile"
          onPress={() => navigation.navigate('Profile')}

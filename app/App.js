@@ -96,7 +96,7 @@ function BuildPattern({ navigation }) {
   let paletteInfo = {colors:[]}
   return (
     <ValueProvider value={paletteInfo}>
-      <ScrollView style={styles.container}>
+      <View style={styles.container}>
         <Pattern></Pattern>
         <PalettePreview></PalettePreview>
         <PaletteContext></PaletteContext>
@@ -104,7 +104,7 @@ function BuildPattern({ navigation }) {
           color = '#FAD4D4'
           title="Go Back" 
           onPress={() => navigation.goBack()} />
-      </ScrollView>
+      </View>
     </ValueProvider> 
   );
 }
